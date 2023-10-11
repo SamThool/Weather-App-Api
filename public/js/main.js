@@ -21,6 +21,7 @@ const getInfo = async(event) =>{
             const data = await response.json();
             const arrdata = [data];
             temprealval.innerText= arrdata[0].main.temp;
+            console.log(arrdata[0])
             city_name.innerText= `${arrdata[0].name},${arrdata[0].sys.country}`;
             const tempmood = arrdata[0].weather[0].main;
             if(tempmood==`Clear`){
